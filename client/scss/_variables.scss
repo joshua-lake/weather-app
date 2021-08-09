@@ -1,0 +1,7 @@
+$primary-color :#272727; // <-- create variable
+
+$font-weights : ( // <-- create map (variable like object)
+  'regular': 400,
+  'medium': 500,
+  'bold': 700
+);

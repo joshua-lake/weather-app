@@ -1,0 +1,60 @@
+@import './resets';
+@import './variables';
+
+@function weight ($weight-name) {
+  @return map-get($font-weights, $weight-name )
+}
+
+@mixin flexCentre ($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.test {
+  color: $primary-color;
+  &:hover{
+    color: blue;
+  }
+}
+
+.body {
+  background-color: #7c7b7b;
+  height: 100vh;
+  @include flexCentre(column);
+}
+
+.within-body {
+  background-color: blue;
+  @include flexCentre(column);
+  width: 30%;
+  border-radius: 10px;
+}
+
+.weather {
+  // margin: 0 auto;
+  @include flexCentre(column);
+  font-weight: weight(medium);
+}
+
+.location {
+  @include flexCentre(column);
+  font-weight: weight(bold);
+  font-size: 40px;
+}
+
+.city {
+  margin: 0%;
+  padding: 0%;
+}
+
+.country {
+  margin: 0%;
+  padding: 0%;
+}
+
+.icon {
+  width: 5%;
+  height: 5%;
+}
